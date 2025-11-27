@@ -1,0 +1,279 @@
+/* 
+ * Microchip Distributor Website - Responsive Styles
+ * Additional responsive design elements and breakpoints
+ */
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--container-max-width);
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hero-cta {
+    justify-content: center;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-banner h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .nav-menu li {
+    margin-left: var(--spacing-md);
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .hero-cta .btn {
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-banner h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+  
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-banner h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-banner p {
+    font-size: var(--font-size-base);
+  }
+  
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .hero-cta {
+    width: 100%;
+  }
+  
+  .nav-menu li {
+    margin: var(--spacing-xs) 0;
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .fixed-contact {
+    position: static;
+    margin: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .breadcrumb {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* High Resolution Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Adjustments for high DPI displays */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .main-header,
+  .fixed-contact,
+  .main-footer,
+  .hero-banner .cta {
+    display: none;
+  }
+  
+  .container {
+    max-width: 100%;
+  }
+  
+  .features-grid,
+  .products-grid,
+  .solutions-grid,
+  .news-grid {
+    display: block;
+  }
+  
+  .feature-card,
+  .product-category,
+  .solution-card,
+  .news-item {
+    page-break-inside: avoid;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .feature-card,
+  .product-category,
+  .solution-card,
+  .hero-banner,
+  .final-cta {
+    transform: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --light-gray: #f0f0f0;
+    --primary-blue: #0000ff;
+    --secondary-blue: #0000cc;
+    --dark-gray: #000000;
+  }
+  
+  .btn {
+    border: 2px solid var(--dark-gray);
+  }
+  
+  .data-table th {
+    background-color: var(--dark-gray);
+    color: var(--white);
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-gray: #e0e0e0;
+    --medium-gray: #b0b0b0;
+    --light-gray: #2a2a2a;
+    --white: #121212;
+  }
+  
+  body {
+    background-color: var(--white);
+    color: var(--dark-gray);
+  }
+  
+  .main-header {
+    background-color: var(--white);
+    color: var(--dark-gray);
+  }
+  
+  .nav-menu {
+    background-color: var(--white);
+    color: var(--dark-gray);
+  }
+  
+  .feature-card,
+  .product-category,
+  .solution-card,
+  .news-item {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: var(--dark-gray);
+  }
+  
+  .data-table {
+    background-color: #1e1e1e;
+  }
+  
+  .data-table tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
+  
+  .data-table th {
+    background-color: var(--primary-blue);
+  }
+  
+  .footer-section a {
+    color: rgba(224, 224, 224, 0.7);
+  }
+  
+  .footer-section a:hover {
+    color: var(--secondary-blue);
+  }
+}

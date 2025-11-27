@@ -1,0 +1,12 @@
+# Exclude all markdown documentation files
+*.md
+
+# Optional: Exclude common build/temp files
+node_modules/
+.DS_Store
+*.log
+*.tmp
+dist/
+build/
+.env
+.env.local

@@ -1,0 +1,106 @@
+目标：做一个“Microchip代理”核心关键词的网站。
+域名：microchip.elec-distributor.com
+技术栈：HTML5 + CSS3 (语义化标签)，部署于 Cloudflare Pages。
+设计风格：全站响应式设计，现代化、清晰的模块化布局，适合B2B工业电子风格。
+1. SEO 基础设置与 Meta 优化
+总体要求：针对百度 SEO 优化。
+URL 结构：层级清晰，使用静态 URL (例如 /products/mcu/pic16-series.html)。
+导航：所有页面必须包含面包屑导航 (Breadcrumb)。
+Sitemap：生成用于 SEO 的 sitemap.xml 结构说明。
+图片优化：所有 <img> 标签必须包含 alt 属性，描述图片内容并自然包含关键词。
+全局 Meta 标签定义：
+Title (标题): Microchip代理商_授权一级Microchip代理_力通电子
+Description (描述): 力通是Microchip(微芯科技)官方授权一级代理商，供应PIC单片机、AVR单片机、SAM系列、FPGA、模拟器件及EEPROM全系列产品。我们提供原装正品、MPLAB开发支持和优势价格，欢迎咨询。
+Keywords (关键词): Microchip代理, Microchip代理商, Microchip Distributor, PIC单片机代理, AVR代理
+关键词布局策略：
+核心关键词：Microchip代理, Microchip代理商
+次核心/长尾关键词：
+地域扩展：Microchip代理USA, Microchip代理商India, Microchip日本代理, Microchip德国代理, Microchip越南代理
+产品组合：Microchip MCU代理, Microchip FPGA代理, Microchip EEPROM代理, Microchip LDO代理
+资质相关：Microchip授权代理, Microchip一级代理
+问题型/搜索意图：PIC单片机选型指南, Microchip代理商联系方式, Microchip官网代理查询
+页面布局：
+首页：集中攻克“Microchip代理”、“Microchip代理商”。
+产品页：优化“分类 + 代理”（如：Microchip 8位MCU代理）。
+型号页：优化“具体型号 + 价格/现货/代理”（如：PIC16F877A 代理）。
+解决方案页：优化“行业 + 方案”（如：医疗电子Microchip方案）。
+技术博客：优化长尾问题词。
+2. 首页 (Index Page) 详细要求
+首页必须专业、内容丰富，包含以下模块：
+英雄横幅 (Hero Banner):
+背景：科技感抽象SVG（电路纹理）。
+文案：“赋能智能创新 - 您的首选 Microchip 授权代理商”。
+CTA按钮：“查看产品线” & “联系我们”。
+核心优势 (Why Choose Us): 展示作为 Microchip 代理的竞争力（如：20年供货保证、原厂技术支持、现货库存）。
+核心产品领域 (Core Product Areas): 网格展示重点分类：8位/16位/32位 MCU, FPGA (PolarFire), 模拟与接口, 存储器。
+解决方案与应用 (Solutions & Applications): 展示 5 个重点行业（工业控制、汽车电子、物联网IoT、消费电子、医疗设备）。
+最新动态 (Latest News): 展示 Microchip 新品发布或公司库存资讯。
+最终行动号召 (Final CTA): 引导用户咨询报价。
+3. 产品中心 (Product Center) 要求
+结构：按 Microchip 官网逻辑分类（MCU/MPU, Analog, Interface, FPGA, Memory）。
+分类页内容：
+H1 标题：Microchip [分类名] 代理与选型 (例如：Microchip 8位 MCU 代理)
+原创描述 (200-300字)：介绍该分类特点（如 PIC 的 CIP 独立外设、AVR 的易用性、SAM 系列的低功耗），融入关键词。
+选型指南入口：链接到技术文章《如何选择适合您的 PIC 或 AVR 单片机？》。
+代理商点评/应用解读：FAE 撰写的点评，例如“PIC16系列在抗干扰要求高的家电控制中表现优异”。
+型号表格 (重点)：
+每个分类下发布 1个表格页（示例），包含列：型号 (Part Number), 内核 (Core), 闪存 (Flash), 引脚数 (Pins), 封装 (Package), 工作电压 (Voltage)。
+Schema.org：在表格页 HTML 中嵌入 Product 类型的 JSON-LD 结构化数据，确保搜索引擎抓取详细参数。
+FAQ 模块：针对该类别的常见问题（如：MPLAB X IDE 支持哪些型号？PIC 和 AVR 的区别？）。
+配套/替代推荐：列出推荐的 LDO 或 EEPROM 配套料号。
+多样化 CTA：“下载 Datasheet”、“申请样片”、“获取 BOM 报价”、“技术咨询”。
+4. 技术支持 (Tech Support) 要求
+分类：选型指南、应用笔记 (App Notes)、开发环境 (MPLAB)、常见问题 (Troubleshooting)。
+标签系统 (Tags)：文章需打标签，如：PIC18, dsPIC, Motor Control, USB, LoRa, CryptoAuth。点击标签可聚合文章。
+内容策略 (发布 5 篇)：
+《PIC16F1xxx 系列低功耗模式配置指南》
+《使用 dsPIC33 实现无刷电机 FOC 控制入门》
+《Microchip PolarFire FPGA：低功耗与安全性的结合》
+《如何使用 MCC (MPLAB Code Configurator) 快速生成代码》
+《汽车级 MCU 选型：AVR DA 系列与 PIC18-Q 系列对比》
+内链优化：文章中提到型号（如 dsPIC33CK）时，必须链接到对应的产品详情页。
+作者简介：每篇文章底部附带 FAE 作者卡片（姓名、照片、资历），增加 E-E-A-T 权重。
+相关推荐：文章末尾自动推荐 3-5 篇相关技术文章。
+5. 解决方案 (Solutions) 要求
+结构：独立 URL 结构 /solutions/automotive/ 等。
+内容策略 (发布 5 篇)：
+汽车触摸 HMI 方案 (基于 Microchip mTouch 技术)
+工业变频器控制方案 (基于 dsPIC33 数字信号控制器)
+智能门锁低功耗方案 (基于 SAM L10/L11)
+医疗雾化器驱动方案 (利用 CIP 独立核心外设)
+以太网供电 (PoE) 系统方案 (Microchip PoE 交换机芯片)
+详情页结构：
+摘要 (Summary)：含关键词。
+方案框图 (Block Diagram)：必须配图，SVG 或清晰图片，带详细 alt 属性。
+核心优势：分点列出。
+推荐物料清单 (BOM)：列出方案中的 Microchip 关键芯片，并链接到产品页。
+6. 新闻中心 (News Center) 要求
+分类：区分“公司新闻”和“行业动态”。
+Schema.org：使用 NewsArticle JSON-LD 标记。
+内容策略 (发布 5 篇)：
+包含 Microchip 收购动态回顾、产能扩充新闻、新一代 PIC 单片机发布解读等。
+文章字数 > 800字，引用权威数据并加入“代理商视角”的解读。
+7. 关于我们与联系我们
+关于我们：模块化布局，介绍公司历史、Microchip 授权证书展示、仓储实力。
+联系我们：
+右侧边栏悬浮或固定展示：
+Whatsapp: +86 15013702378
+WeChat: +86 18612518271
+地址、邮箱表格单。
+嵌入谷歌地图或百度地图静态图。
+8. 视觉与素材生成 (SVG & Images)
+请按以下要求生成 placeholder 图片路径或 SVG 代码：
+Logo: 基于文本“Microchip Distributor”或“力通”的简洁 SVG Logo。
+Icons: 生成一套 SVG 图标，代表：MCU (芯片形状), Analog (波形), Connectivity (无线信号), Security (盾牌), FPGA (网格)。
+背景图: 科技蓝/灰色调的电路板线条、晶圆纹理 SVG 背景。
+图片路径规范：列表页和详情页图片 URL 需结构化，如 /assets/images/products/pic16-series.jpg。
+9. 响应式与代码规范
+CSS 使用 Flexbox 或 Grid 布局。
+HTML 结构清晰：<header>, <nav>, <main>, <article>, <aside>, <footer>。
+移动端适配：Hamburger 菜单，表格在手机端可横向滚动。
+10. 详细页内容标准
+新闻/解决方案/技术支持详情页：
+篇幅 > 800 字。
+结构：H1 标题 -> 导语 -> H2 小标题 -> H3 子标题 -> 列表 -> 总结 -> CTA。
+侧边栏：显示“热门解决方案”或“相关 Microchip 型号”。
+底部 CTA：所有文章底部必须包含“联系 Microchip 专家”或“获取该方案报价”的按钮。

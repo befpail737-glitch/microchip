@@ -1,0 +1,29 @@
+# Cloudflare Pages Configuration File
+# This file specifies build settings and environment variables for deployment
+
+[build]
+  # The directory containing the build output
+  output = "."
+
+# Build command (if needed)
+# command = "npm run build"
+
+[env]
+  # Environment variables if needed
+  # NODE_VERSION = "18"
+
+[[redirects]]
+  # Redirect from legacy URLs if any existed
+  # from = "/old-path"
+  # to = "/new-path"
+  # status = 301
+
+[[headers]]
+  # Security headers
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
