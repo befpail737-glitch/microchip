@@ -2,11 +2,10 @@
 # This file specifies build settings and environment variables for deployment
 
 [build]
-  # The directory containing the build output
+  # The directory containing the build output (root directory for static site)
   output = "."
-
-# Build command (if needed)
-# command = "npm run build"
+  # No build command needed for static HTML site
+  command = ""
 
 [env]
   # Environment variables if needed
