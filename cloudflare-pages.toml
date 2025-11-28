@@ -17,10 +17,35 @@
   # to = "/new-path"
   # status = 301
 
+# CSS files: No cache, always revalidate for immediate updates
 [[headers]]
-  # Security headers
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# JS files: No cache, always revalidate
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# HTML files: No cache, always revalidate
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Image files: Cache for 1 week
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Other static resources: Cache for 1 hour
+[[headers]]
   for = "/*"
   [headers.values]
+    Cache-Control = "public, max-age=3600"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
