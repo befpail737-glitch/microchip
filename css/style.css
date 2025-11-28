@@ -1164,3 +1164,925 @@ img {
     margin: 0.5rem auto;
   }
 }
+
+/* ================================
+   Detail Pages Modern Styling
+   ================================ */
+
+/* 1. Enhanced Page Header for Detail Pages */
+.detail-page-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 4rem 0 3rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-page-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  transform: rotate(15deg);
+}
+
+.detail-page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-page-header h1 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.detail-page-header p {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.header-badges {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 2. Quick Navigation Sticky Bar */
+.quick-nav {
+  position: sticky;
+  top: 70px;
+  background: white;
+  border-bottom: 2px solid var(--light-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.quick-nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.quick-nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-nav li {
+  margin: 0;
+}
+
+.quick-nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.quick-nav a:hover,
+.quick-nav a.active {
+  color: var(--primary-blue);
+  border-bottom-color: var(--primary-blue);
+  background: var(--light-blue);
+}
+
+/* 3. Modular Section Cards */
+.detail-section {
+  padding: 3rem 0;
+  background: white;
+}
+
+.detail-section:nth-child(even) {
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.section-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+}
+
+.section-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+.section-card h2 {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  padding-top: 0.5rem;
+}
+
+.section-card h3 {
+  color: var(--dark-gray);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.375rem;
+}
+
+.section-card p {
+  line-height: 1.8;
+  color: var(--medium-gray);
+}
+
+/* 4. Modern Table Styling with Enhanced UI */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+}
+
+.table-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--light-blue) 0%, #fff 100%);
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+.table-header h3 {
+  color: var(--primary-blue);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.375rem;
+}
+
+.table-header p {
+  color: var(--medium-gray);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.table-controls {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.625rem 1rem 0.625rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.search-box::before {
+  content: '🔍';
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.filter-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.filter-btn.active {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.specs-table,
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table thead,
+.bom-table thead {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+}
+
+.specs-table th,
+.bom-table th {
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.specs-table td,
+.bom-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.specs-table tbody tr,
+.bom-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.specs-table tbody tr:hover,
+.bom-table tbody tr:hover {
+  background: rgba(0, 102, 204, 0.03);
+}
+
+.specs-table tbody tr:nth-child(even),
+.bom-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.specs-table tbody tr:nth-child(even):hover,
+.bom-table tbody tr:nth-child(even):hover {
+  background: rgba(0, 102, 204, 0.05);
+}
+
+/* Table badges for highlighting */
+.table-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.table-badge.featured {
+  background: #e7f5ff;
+  color: var(--primary-blue);
+}
+
+.table-badge.new {
+  background: #d3f9d8;
+  color: var(--success-green);
+}
+
+.table-badge.popular {
+  background: #fff3e0;
+  color: var(--warning-orange);
+}
+
+/* 5. Feature and Benefit Card Grids with Top Accent Bars */
+.features-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.feature-benefit-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-top: 4px solid transparent;
+}
+
+.feature-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 8px 8px 0 0;
+}
+
+.feature-benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 102, 204, 0.15);
+}
+
+.feature-benefit-card h4 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+}
+
+.feature-benefit-card p {
+  color: var(--medium-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.feature-benefit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.feature-benefit-card ul li {
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  position: relative;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.feature-benefit-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-green);
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+/* 6. FAQ Accordion Styling */
+.faq-section {
+  margin: 2rem 0;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  padding: 1.25rem 3rem 1.25rem 1.5rem;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--dark-gray);
+  position: relative;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  transition: transform 0.3s ease;
+}
+
+.faq-question:hover {
+  background: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+.faq-item.active .faq-question {
+  color: var(--primary-blue);
+  background: var(--light-blue);
+  border-bottom: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-answer p {
+  color: var(--medium-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-answer ul {
+  margin: 0.75rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.faq-answer ul li {
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 7. Product Card Grid with Spec Lists */
+.products-showcase {
+  margin: 2rem 0;
+}
+
+.product-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-showcase-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f0f0f0;
+}
+
+.product-showcase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 102, 204, 0.2);
+  border-color: var(--primary-blue);
+}
+
+.product-card-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.product-card-header h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.product-card-header p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.product-card-body {
+  padding: 1.5rem;
+}
+
+.product-specs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.product-specs-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.product-specs-list li:last-child {
+  border-bottom: none;
+}
+
+.spec-label {
+  color: var(--medium-gray);
+  font-weight: 500;
+}
+
+.spec-value {
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.product-card-footer {
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.product-card-footer .btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* 8. Selection Guide Criteria Cards */
+.selection-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.criteria-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.criteria-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateX(4px);
+}
+
+.criteria-card h4 {
+  color: var(--primary-blue);
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.criteria-card h4::before {
+  content: '▶';
+  color: var(--secondary-blue);
+  font-size: 0.875rem;
+}
+
+.criteria-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.criteria-card ul li {
+  padding: 0.625rem 0 0.625rem 1.75rem;
+  position: relative;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.criteria-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-green);
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+/* 9. Technical Resource Download Cards */
+.resources-download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.resource-download-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.resource-download-card:hover {
+  border-left-color: var(--primary-blue);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.resource-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.resource-content {
+  flex: 1;
+}
+
+.resource-content h5 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-blue);
+  font-size: 1rem;
+}
+
+.resource-content p {
+  margin: 0 0 0.75rem 0;
+  color: var(--medium-gray);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.resource-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--medium-gray);
+}
+
+.resource-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* 10. Expert Insights Quote-Style Blocks */
+.expert-insights {
+  margin: 3rem 0;
+}
+
+.insight-quote {
+  background: linear-gradient(135deg, var(--light-blue) 0%, #fff 100%);
+  border-left: 6px solid var(--primary-blue);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.1);
+}
+
+.insight-quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--primary-blue);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.insight-quote-text {
+  font-size: 1.125rem;
+  color: var(--dark-gray);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.insight-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.author-info h6 {
+  margin: 0;
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.author-info p {
+  margin: 0;
+  color: var(--medium-gray);
+  font-size: 0.875rem;
+}
+
+/* 11. Mobile Responsive Optimizations for Detail Pages */
+@media (max-width: 1024px) {
+  .quick-nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quick-nav li {
+    flex-shrink: 0;
+  }
+
+  .features-benefits-grid,
+  .product-cards-grid,
+  .selection-guide-grid,
+  .resources-download-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-page-header {
+    padding: 3rem 0 2rem;
+  }
+
+  .detail-page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .quick-nav {
+    top: 60px;
+  }
+
+  .quick-nav a {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .section-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .table-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  /* Mobile table card-ification */
+  .specs-table thead,
+  .bom-table thead {
+    display: none;
+  }
+
+  .specs-table tbody tr,
+  .bom-table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  .specs-table td,
+  .bom-table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .specs-table td:last-child,
+  .bom-table td:last-child {
+    border-bottom: none;
+  }
+
+  .specs-table td::before,
+  .bom-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--primary-blue);
+    flex-shrink: 0;
+    width: 45%;
+  }
+
+  .features-benefits-grid,
+  .product-cards-grid,
+  .selection-guide-grid,
+  .resources-download-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-card-footer {
+    flex-direction: column;
+  }
+
+  .product-card-footer .btn {
+    width: 100%;
+  }
+
+  .insight-quote {
+    padding: 1.5rem;
+  }
+
+  .insight-quote-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-card {
+    padding: 1.25rem;
+  }
+
+  .feature-benefit-card {
+    padding: 1.5rem;
+  }
+
+  .product-showcase-card {
+    margin-bottom: 1rem;
+  }
+}
