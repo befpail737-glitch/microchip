@@ -667,18 +667,500 @@ img {
     --font-size-5xl: 1.5rem; /* 24px */
     --font-size-4xl: 1.25rem; /* 20px */
   }
-  
+
   .hero-cta .btn {
     width: 100%;
     margin-bottom: var(--spacing-sm);
   }
-  
+
   .breadcrumb {
     font-size: var(--font-size-xs);
   }
-  
+
   .data-table {
     display: block;
     overflow-x: auto;
+  }
+}
+
+/* ================================
+   Modern List Pages Styling
+   ================================ */
+
+/* 1. Page Header Enhancement */
+.page-header {
+  background: linear-gradient(135deg, #E6F2FA 0%, #fff 100%);
+  padding: 3rem 0;
+  text-align: center;
+  border-bottom: 3px solid var(--primary-blue);
+}
+
+.page-header h1 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.125rem;
+  color: var(--medium-gray);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 2. Overview Sections */
+.products-overview,
+.solutions-overview,
+.mcus-overview,
+.support-overview {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.overview-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 3. Modern Card Grids */
+.categories-grid,
+.families-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.category-card,
+.family-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::before,
+.family-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--primary-blue), var(--secondary-blue));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card:hover,
+.family-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 102, 204, 0.15);
+  border-color: var(--primary-blue);
+}
+
+.category-card:hover::before,
+.family-card:hover::before {
+  opacity: 1;
+}
+
+.category-card h3,
+.family-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.category-card p,
+.family-card p {
+  color: var(--medium-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.category-card ul,
+.family-card ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.category-card ul li,
+.family-card ul li {
+  padding: 0.5rem 0;
+  color: var(--dark-gray);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.category-card ul li::before,
+.family-card ul li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+/* 4. Enhanced Feature Grids */
+.product-features,
+.solution-benefits,
+.mcu-features {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.features-grid .feature-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.features-grid .feature-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.features-grid .feature-item h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.features-grid .feature-item p {
+  color: var(--medium-gray);
+  line-height: 1.6;
+}
+
+/* 5. CTA Section Enhancement */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 40%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section .btn {
+  margin: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section .btn-secondary {
+  background: white;
+  color: var(--primary-blue);
+  border: none;
+}
+
+.cta-section .btn-secondary:hover {
+  background: var(--light-blue);
+}
+
+/* 6. Selection Guide Styling */
+.selection-guide {
+  padding: 3rem 0;
+  background-color: #f8f9fa;
+}
+
+.selection-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.selection-criteria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.criteria-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.criteria-item h4 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.criteria-item ul {
+  list-style: none;
+}
+
+.criteria-item ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.criteria-item ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--success-green);
+  font-weight: bold;
+}
+
+/* 7. News and Insights Sections */
+.news-categories,
+.industry-insights,
+.press-releases,
+.events-webinars {
+  padding: 3rem 0;
+}
+
+.news-categories {
+  background-color: #f8f9fa;
+}
+
+.insights-grid,
+.press-grid,
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.insight-card,
+.press-item,
+.event-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.insight-card:hover,
+.press-item:hover,
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.news-date,
+.press-date,
+.event-date {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--light-blue);
+  border-radius: 4px;
+}
+
+.insight-card h3,
+.press-item h3,
+.event-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+}
+
+.insight-card .date {
+  color: var(--medium-gray);
+  font-size: var(--font-size-sm);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* 8. Newsletter Section */
+.newsletter {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--light-blue) 0%, #fff 100%);
+}
+
+.newsletter-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-base);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.newsletter .disclaimer {
+  font-size: var(--font-size-sm);
+  color: var(--medium-gray);
+  margin-top: 1rem;
+}
+
+/* 9. Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.pagination span {
+  color: var(--medium-gray);
+  font-weight: 600;
+}
+
+/* 10. Support Resource Sections */
+.support-resources,
+.documentation-library,
+.development-tools,
+.training-resources {
+  padding: 3rem 0;
+}
+
+.support-resources {
+  background-color: #f8f9fa;
+}
+
+.development-tools {
+  background-color: #f8f9fa;
+}
+
+.resources-grid,
+.docs-grid,
+.tools-grid,
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.resource-card,
+.doc-card,
+.tool-card,
+.training-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.resource-card:hover,
+.doc-card:hover,
+.tool-card:hover,
+.training-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-left-color: var(--primary-blue);
+}
+
+.resource-card h3,
+.doc-card h3,
+.tool-card h3,
+.training-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* 11. Responsive Optimizations for Modern List Pages */
+@media (max-width: 768px) {
+  .categories-grid,
+  .families-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .page-header {
+    padding: 2rem 0;
+  }
+
+  .category-card,
+  .family-card {
+    padding: 1.5rem;
+  }
+
+  .selection-criteria {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-grid,
+  .press-grid,
+  .events-grid,
+  .resources-grid,
+  .docs-grid,
+  .tools-grid,
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .cta-section {
+    padding: 3rem 0;
+  }
+
+  .cta-section .btn {
+    display: block;
+    margin: 0.5rem auto;
   }
 }
